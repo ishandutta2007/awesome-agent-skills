@@ -1,10 +1,19 @@
-# Agent Skills
+# 🚀 Awesome AI Skills
 
-**Production-grade engineering skills for AI coding agents.**
+<p align="center">
+  <img src="./assets/banner.svg" alt="Awesome AI Skills Banner" width="100%">
+</p>
+
+<p align="center">
+  <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a>
+  <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
+</p>
+
+**Production-grade engineering Awesome AI Skills for AI coding agents.** 🌟
 
 Skills encode the workflows, quality gates, and best practices that senior engineers use when building software. These ones are packaged so AI agents follow them consistently across every phase of development.
 
-![Addy's Agent Skills](https://addyosmani.com/assets/images/addys-agent-skills.jpg)
+![Awesome AI Skills](https://addyosmani.com/assets/images/addys-agent-skills.jpg)
 
 ```
   DEFINE          PLAN           BUILD          VERIFY         REVIEW          SHIP
@@ -17,7 +26,7 @@ Skills encode the workflows, quality gates, and best practices that senior engin
 
 ---
 
-## Commands
+## 🛠️ Commands
 
 7 slash commands that map to the development lifecycle. Each one activates the right skills automatically.
 
@@ -37,7 +46,7 @@ Skills also activate automatically based on what you're doing — designing an A
 
 ---
 
-## Quick Start
+## 🚀 Quick Start
 
 <details>
 <summary><b>Claude Code (recommended)</b></summary>
@@ -149,15 +158,15 @@ Skills are plain Markdown - they work with any agent that accepts system prompts
 
 ---
 
-## All 24 Skills
+## 📚 All 24 Skills
 
-The commands above are entry points. The pack includes 24 skills total — 23 lifecycle skills plus the `using-agent-skills` meta-skill. Each skill is a structured workflow with steps, verification gates, and anti-rationalization tables. You can also reference any skill directly.
+The commands above are entry points. The pack includes 24 skills total — 23 lifecycle skills plus the `using-awesome-ai-skills` meta-skill. Each skill is a structured workflow with steps, verification gates, and anti-rationalization tables. You can also reference any skill directly.
 
 ### Meta - Discover which skill applies
 
 | Skill | What It Does | Use When |
 |-------|-------------|----------|
-| [using-agent-skills](skills/using-agent-skills/SKILL.md) | Maps incoming work to the right skill workflow and defines shared operating rules | Starting a session or deciding which skill applies |
+| [using-awesome-ai-skills](skills/using-awesome-ai-skills/SKILL.md) | Maps incoming work to the right skill workflow and defines shared operating rules | Starting a session or deciding which skill applies |
 
 ### Define - Clarify what to build
 
@@ -275,10 +284,10 @@ Every skill follows a consistent anatomy:
 
 ---
 
-## Project Structure
+## 📁 Project Structure
 
 ```
-agent-skills/
+awesome-agent-skills/
 ├── skills/                            # 24 skills (23 lifecycle + 1 meta)
 │   ├── interview-me/                  #   Define
 │   ├── idea-refine/                   #   Define
@@ -303,7 +312,7 @@ agent-skills/
 │   ├── documentation-and-adrs/        #   Ship
 │   ├── observability-and-instrumentation/ # Ship
 │   ├── shipping-and-launch/           #   Ship
-│   └── using-agent-skills/            #   Meta: how to use this pack
+│   └── using-awesome-ai-skills/       #   Meta: how to use this pack
 ├── agents/                            # 4 specialist personas
 ├── references/                        # 5 supplementary checklists
 ├── hooks/                             # Session lifecycle hooks

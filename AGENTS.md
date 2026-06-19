@@ -4,7 +4,7 @@ This file provides guidance to AI coding agents (Claude Code, Cursor, Copilot, A
 
 ## Repository Overview
 
-A collection of skills for Claude.ai and Claude Code for senior software engineers. Skills are packaged instructions and scripts that extend Claude and your coding agents capabilities.
+A collection of Awesome AI Skills for Claude.ai and Claude Code for senior software engineers. Awesome AI Skills are packaged instructions and scripts that extend Claude and your coding agents capabilities.
 
 ## OpenCode Integration
 
