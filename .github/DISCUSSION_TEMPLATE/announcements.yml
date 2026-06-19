@@ -1,0 +1,10 @@
+title: Announcements
+body:
+  - type: textarea
+    id: welcome_text
+    attributes:
+      label: Welcome Text
+      description: Welcome text for this announcement.
+      placeholder: Write something here...
+    validations:
+      required: true
