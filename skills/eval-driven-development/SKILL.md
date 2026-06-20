@@ -21,21 +21,25 @@ Eval-Driven Development ensures that AI features behave deterministically and pr
 5. **Establish Baseline**: Set a minimum threshold for CI/CD checks.
 
 ## Common Rationalizations
-- "A few manual examples are enough." Manual checks miss regressions and cannot
-  protect future model, prompt, or retrieval changes.
-- "The model output is subjective." Subjective output still needs explicit
-  quality dimensions, examples, and threshold decisions.
-- "We can add evals after launch." Without a baseline, every later change is
-  harder to compare and easier to rationalize.
+
+| Rationalization | Why It Is Wrong |
+|---|---|
+| "Manual spot checks are enough." | Spot checks miss regressions across prompts, model versions, and edge cases. |
+| "We can add evals after launch." | Without a baseline, you cannot tell whether a later prompt or model change improved behavior. |
+| "The judge model says it is good." | LLM judges need criteria, calibration examples, and failure review before they are trustworthy. |
 
 ## Red Flags
-- No golden dataset exists before prompt or retrieval changes ship.
-- The metric rewards exact formatting while ignoring task success.
-- Failing examples are deleted instead of analyzed and preserved.
-- CI does not run the evaluation or report a threshold.
+
+- No golden dataset exists
+- Metrics are vague or not tied to user-visible quality
+- Low-scoring examples are ignored instead of inspected
+- The baseline threshold is chosen after seeing the desired result
 
 ## Verification
-- Golden examples cover happy paths, edge cases, and known failures.
-- Metrics are documented and aligned with user-visible quality.
-- Baseline scores are recorded before the implementation changes.
-- The eval command runs locally or in CI and blocks unacceptable regressions.
+
+Before finishing, confirm:
+
+- The golden dataset includes normal, edge, and known-failure cases
+- Metrics and evaluator prompts are committed or otherwise reproducible
+- The current model/prompt has a recorded baseline
+- Failure examples have been reviewed and categorized

@@ -21,23 +21,25 @@ Model Context Protocol (MCP) is the standard for connecting AI agents to externa
 5. **Configure Client**: Add the MCP server to the agent's configuration file.
 
 ## Common Rationalizations
-- "The tool works in my shell, so MCP will work too." MCP adds schema,
-  transport, client configuration, and error-handling boundaries.
-- "The schema can be loose." Loose schemas push ambiguity into the agent and
-  create unreliable tool calls.
-- "Secrets can go in examples." Configuration docs must show placeholders and
-  keep credentials in the user's secret store.
+
+| Rationalization | Why It Is Wrong |
+|---|---|
+| "The handler works, so the tool is done." | Agents rely on schemas, names, and descriptions as much as handler code. |
+| "Errors can just throw." | MCP clients need predictable errors so agents can recover or explain the failure. |
+| "The client config is obvious." | A working server is not useful until the target client can discover and invoke it. |
 
 ## Red Flags
-- Tool descriptions do not explain when the agent should call them.
-- Handlers return raw stack traces or provider errors to the model.
-- Client configuration examples include real tokens, host-specific paths, or
-  hidden environment assumptions.
-- The server has no local smoke test for at least one successful call and one
-  validation failure.
+
+- Tool names or descriptions are vague
+- Inputs accept broad strings instead of structured fields
+- The handler returns raw internal errors or stack traces
+- No local client invocation has been tested
 
 ## Verification
-- Tool input schemas reject invalid requests with clear errors.
-- The MCP server starts from a clean checkout using documented commands.
-- At least one client can list and call the tools successfully.
-- Logs and example configs contain no secrets or private user data.
+
+Before finishing, confirm:
+
+- Tool schemas describe the inputs an agent should actually provide
+- Handler success and error paths were exercised locally
+- Client configuration is documented and tested
+- Secrets, tokens, and local paths are not exposed in tool responses
